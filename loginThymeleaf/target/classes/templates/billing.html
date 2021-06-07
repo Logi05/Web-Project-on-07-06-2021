@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<body>
+	
+	 <form action="billing" method="post"> 
+	
+	 <div>
+	 <div align="left">
+			<h3>
+				<a th:href="@{'/logout'}">Logout</a>
+			</h3>
+		</div>
+			<h2>StockList in Shop for Employee</h2>
+
+			 <div align="left">
+				<h3>
+					<a th:href="@{'/stocklist'}">Add new</a>
+				</h3>
+			</div> 
+
+
+		<!--  	<tr>
+
+				
+					<div class="panel-body" align="center">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th>ID</th>
+									<th>Item</th>
+									<th>Price</th>
+									<th>Quantity</th>
+									<th>Edit</th> 
+									<th>Delete</th>  
+									  <th>add</th> 
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="stock : ${liststock }">
+									<!-- stock class 
+									<td th:text="${stock.id}">ID</td>
+									<td th:text="${stock.item}">Item</td>
+									<td th:text="${stock.price}">Price</td>
+									<td th:text="${stock.quantity}">Quantity</td>
+									<!--  <td><a th:href="@{'/edit/' + ${stock.id}}">Edit</a></td> 
+									<td><a th:href="@{'/delete/' + ${stock.id}}">Delete</a></td> 
+								    <td><a th:href="@{'/add/' + ${stock.id}}">add</a></td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div> -->
+				  	<div>
+						<h2>Billing</h2>
+
+					 <!-- <form action="#" th:action="@{/add}" th:object="${billingstock}"
+							method="post">  -->	
+
+
+
+							<tr>
+
+								<div class="col-sm-5" align="center">
+									<div class="panel-body" align="center">
+										<table class="table">
+											<thead class="thead-dark">
+												<tr>
+													<th>ID</th>
+													<th>Item</th>
+													<th>Price</th>
+													<th>Quantity</th>
+													 <th>add</th> 
+													<th>Delete</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr th:each="bill: ${billingstock}">
+													<!-- bill class -->
+													<td th:text="${bill.id}">ID</td>
+													<td th:text="${bill.item()}">Item</td>
+													<td th:text="${bill.price}">Price</td>
+													<td th:text="${bill.quantity}">Quantity</td>
+													<td><a th:href="@{'/add/' + ${bill.id}}">add</a></td>
+													<td><a th:href="@{'/delete/' + ${bill.id}}">Delete</a></td>
+												</tr>
+											</tbody>
+										</table>
+
+									</div>
+
+								</div>
+
+							</tr>
+
+							</tbody>
+							</table>
+						</form>
+
+						<div></div>
+					</div>
+				</div>
+			</tr>
+		</div>
+</html>
+</form>
+</body>
+</html>
